@@ -1,9 +1,7 @@
-﻿using SampleApp.Api.Helpers;
-using SampleApp.Api.Models;
+﻿using SampleApp.Api.Models;
 using SampleApp.Entities;
 using SampleApp.Services.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -13,7 +11,7 @@ namespace SampleApp.Api.Controllers
 {
     public class AcceptBusinessRequirementController : BaseApiController
     {
-        private readonly ILawAcceptanceService _lawAcceptanceService;
+        private readonly ILawAcceptanceService _lawAcceptanceService = null;
 
         public AcceptBusinessRequirementController()
         {

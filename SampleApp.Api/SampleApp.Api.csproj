@@ -47,6 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.4.2.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.DependencyCollector, Version=2.7.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.7.2\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
     </Reference>
@@ -352,13 +358,17 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SampleApp.DependencyResolver\SampleApp.DependencyResolver.csproj">
-      <Project>{9f0391a5-1282-40f9-8695-27cec9eea949}</Project>
-      <Name>SampleApp.DependencyResolver</Name>
+    <ProjectReference Include="..\SampleApp.Connection\SampleApp.Connection.csproj">
+      <Project>{BBA0EEDF-041D-4D0F-9E22-BAEAADB1EB3A}</Project>
+      <Name>SampleApp.Connection</Name>
     </ProjectReference>
     <ProjectReference Include="..\SampleApp.Entities\SampleApp.Entities.csproj">
       <Project>{14d73b99-5f98-48d7-a09b-93d48f7d5d9f}</Project>
       <Name>SampleApp.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleApp.Repository\SampleApp.Repository.csproj">
+      <Project>{38386520-EF91-4DED-9958-470386847DB6}</Project>
+      <Name>SampleApp.Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\SampleApp.Services\SampleApp.Services.csproj">
       <Project>{349ab4d5-1d3d-4b56-82a3-b868df4dca0c}</Project>

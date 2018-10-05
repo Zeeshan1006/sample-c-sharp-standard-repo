@@ -30,19 +30,15 @@ namespace SampleApp.DependencyResolver
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             builder.RegisterType<DbConnectionFactory>()
-                .As<IDbConnectionFactory>()
-                .InstancePerRequest();
+                .As<IDbConnectionFactory>();
 
-            builder.RegisterGeneric(typeof(LawAcceptanceRepository))
-                .As(typeof(ILawAcceptanceRepository))
-                .InstancePerRequest();
+            builder.RegisterType<LawAcceptanceRepository>()
+                .As<ILawAcceptanceRepository>();
 
-            builder.RegisterGeneric(typeof(LawAcceptanceService))
-                .As(typeof(ILawAcceptanceService))
-                .InstancePerRequest();
+            builder.RegisterType<LawAcceptanceService>()
+                .As<ILawAcceptanceService>();
 
             container = builder.Build();
-
             return container;
         }
     }

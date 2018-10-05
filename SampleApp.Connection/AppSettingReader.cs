@@ -11,7 +11,7 @@ namespace SampleApp.Connection
         {
             get
             {
-                return Convert.ToString(ConfigurationManager.AppSettings["ConnectionString"]);
+                return Convert.ToString(ConfigurationManager.AppSettings["Connection"]);
             }
         }
 

@@ -25,6 +25,7 @@ namespace SampleApp.Repository.Implementations
         public LawAcceptanceRepository(IDbConnectionFactory connectionFactory)
         {
             _connectionFactory = connectionFactory;
+            connection = _connectionFactory.CreateTenantDbConnection(null);
         }
 
         public async Task<bool> AcceptBusinessReq(AcceptBusinessRequirement accept)
